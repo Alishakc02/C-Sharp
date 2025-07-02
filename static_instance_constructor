@@ -1,0 +1,30 @@
+
+using System;
+
+
+namespace Alisha03_CSIT_6th
+{
+    class Second
+    {
+        static int count;
+        public Second()
+        {
+            Console.WriteLine("hello from the instance constructor");
+            count++;
+        }
+        static Second()
+        {
+            Console.WriteLine("Hello from static constructor");
+            count = 400;
+        }
+        static void Main(string[] args)
+        {
+            Second d1 = new Second();
+            Console.WriteLine("hello from main");
+            Console.WriteLine("value of count = " + count);
+            Second d2 = new Second();
+            Console.WriteLine("value of count = " + count);
+        }
+    }
+}
+
