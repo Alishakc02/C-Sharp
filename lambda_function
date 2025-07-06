@@ -1,0 +1,18 @@
+using System;
+
+delegate int SquareDelegate(int x);
+
+class Program
+{
+    static void Main()
+    {
+        // Lambda expression assigned to delegate
+        SquareDelegate square = x => x * x;
+
+        // Statement expression
+        int number = 5;
+        int result = square(number); // Using the delegate
+
+        Console.WriteLine("Square of " + number + " is " + result);
+    }
+}
