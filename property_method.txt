@@ -1,0 +1,45 @@
+What are Properties?
+
+Properties are members of a class that provide a flexible mechanism to read, write, or compute the values of private fields. 
+They are a combination of methods that allow you to access and update the value of a field in a controlled manner.
+
+
+What are the Methods?
+
+Methods are blocks of code that perform a specific task. 
+They can accept input parameters, execute a sequence of statements, and optionally return a value. Methods help in organizing and reusing code.
+
+
+
+| Feature               | **Property**                                   | **Method**                                   |
+| --------------------- | ---------------------------------------------- | -------------------------------------------- |
+| **Purpose**           | Access or modify data (like a field)           | Perform actions, calculations, or operations |
+| **Syntax**            | Uses `get` and `set` accessors                 | Uses regular method syntax with `()`         |
+| **Call Style**        | Accessed like a field: `obj.Name`              | Called with parentheses: `obj.DoSomething()` |
+| **Encapsulation**     | Often wraps private fields safely              | Encapsulates logic or behavior               |
+| **Return Type**       | Usually represents data                        | Can return data or be `void`                 |
+| **Overloading**       | Cannot overload properties                     | Can overload methods                         |
+| **Parameter Support** | Does **not** take parameters (except indexers) | Can take any number of parameters            |
+
+
+//Property example
+class Student
+{
+    private string name;
+
+    public string Name   // Property
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+
+
+//Methods example
+class Student
+{
+    public void PrintDetails()  // Method
+    {
+        Console.WriteLine("This is a method.");
+    }
+}
